@@ -1,5 +1,5 @@
 # abap-alv-struc-viewer
-ABAP: View and edit fields a structure in an ALV control
+ABAP: View and edit fields of a structure in an ALV control
 
 This tool generates a table view using ALV out of a DDIC structure. It can be used in control-driven SAPGUI front ends for a replacement of classic dynpro fields.
 
