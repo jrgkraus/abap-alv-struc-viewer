@@ -1,8 +1,9 @@
 *&---------------------------------------------------------------------*
-*& Report zstralv_demo01
+*& Report zstralv_demo03
 *&---------------------------------------------------------------------*
 *& Demo for maintaining values of a structure in an ALV table
 *& where one line is shown for each component
+*& Demo case: usage of field attributes and hotspot click
 *&---------------------------------------------------------------------*
 report zstralv_demo03.
 
