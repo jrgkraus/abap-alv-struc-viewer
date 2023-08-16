@@ -1,8 +1,9 @@
 *&---------------------------------------------------------------------*
-*& Report zstralv_demo01
+*& Report zstralv_demo02
 *&---------------------------------------------------------------------*
 *& Demo for maintaining values of a structure in an ALV table
 *& where one line is shown for each component
+*& Demo case: call for maintenance, usage of event DATA_HAS_CHANGED
 *&---------------------------------------------------------------------*
 report zstralv_demo02.
 
