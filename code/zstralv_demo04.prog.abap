@@ -1,8 +1,9 @@
 *&---------------------------------------------------------------------*
-*& Report zstralv_demo01
+*& Report zstralv_demo04
 *&---------------------------------------------------------------------*
 *& Demo for maintaining values of a structure in an ALV table
 *& where one line is shown for each component
+*& Demo case: usage of the description column
 *&---------------------------------------------------------------------*
 report zstralv_demo04.
 
