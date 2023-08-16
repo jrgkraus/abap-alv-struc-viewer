@@ -12,3 +12,5 @@ It includes the following features:
 * Special value description: When no text table is available, you can also choose a field from the check table to be shown (for instance the name of the customer from KNA1)
 
 To learn more about the usage, explore the demo reports.
+
+## 2023-08-17 added toolbar support
