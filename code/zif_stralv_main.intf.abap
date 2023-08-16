@@ -6,6 +6,16 @@ interface zif_stralv_main
 
   events data_has_changed .
 
+  events toolbar
+    exporting
+      value(e_object)  type ref to cl_alv_event_toolbar_set optional
+      value(e_interactive)  type char01 optional.
+
+  events user_command
+    exporting
+      value(e_ucomm)  type ui_func.
+
+
   events link_clicked
     exporting
       value(ev_fieldname) type lvc_fname

@@ -78,10 +78,23 @@ class zcl_stralv_main definition
     methods on_enter_pressed
         for event enter_pressed of zcl_stralv_output_table.
 
+    methods on_toolbar
+        for event toolbar of zcl_stralv_main
+        importing sender
+                  e_object
+                  e_interactive.
+
+    methods on_user_command
+        for event user_command of zcl_stralv_main
+        importing sender
+                  e_ucomm.
+
+
     methods put_log_dch
       importing
         io_data_changed type ref to cl_alv_changed_data_protocol
         exception       type ref to zcx_stralv_input_error.
+
     methods build_layout
       importing
         iv_optimized     type abap_bool
@@ -105,7 +118,7 @@ class zcl_stralv_main implementation.
 
     register_f4_for_fields(
       value #(
-        ( fieldname = 'FIELDVALUE'
+        ( fieldname = constants=>fieldname-value
           getbefore = abap_true
           register = abap_true
           chngeafter = abap_true ) ) ).
@@ -117,6 +130,8 @@ class zcl_stralv_main implementation.
     set handler on_internal_double_click for me.
     set handler on_hotspot_clicked for me.
     set handler on_f4 for me.
+    set handler on_toolbar for me.
+    set handler on_user_command for me.
 
 
     output_table->set_label_length(
@@ -359,9 +374,6 @@ class zcl_stralv_main implementation.
     rt_res = output_table->inputs.
   endmethod.
 
-
-
-
   method zif_stralv_main~get_label.
     rv_res = output_table->inputs[ ref_field = iv_fieldname ]-fieldlabel.
     "strip icon, if present
@@ -461,6 +473,20 @@ class zcl_stralv_main implementation.
 
   method zif_stralv_main~field.
     result = output_table->fields->get_field( in ).
+  endmethod.
+
+  method on_toolbar.
+    raise event zif_stralv_main~toolbar
+      exporting
+        e_object = e_object
+        e_interactive = e_interactive.
+  endmethod.
+
+  method on_user_command.
+    raise event zif_stralv_main~user_command
+      exporting
+        e_ucomm = e_ucomm.
+
   endmethod.
 
 endclass.
