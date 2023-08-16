@@ -3,6 +3,7 @@
 *&---------------------------------------------------------------------*
 *& Demo for display values of a structure in an ALV table
 *& where one line is shown for each component
+*& Demo case: simple call for displaying
 *&---------------------------------------------------------------------*
 report zstralv_demo01.
 
