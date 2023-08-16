@@ -36,6 +36,7 @@ class application implementation.
   method pbo.
     if stralv is not bound.
       try.
+          screen_data = zst_stralv_demo.
           stralv = zcl_stralv_main=>new( get_settings( ) ).
           set handler on_data_changed for stralv.
           stralv->display( ).
