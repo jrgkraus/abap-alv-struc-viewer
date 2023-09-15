@@ -14,4 +14,4 @@ It includes the following features:
 To learn more about the usage, explore the demo reports.
 
 ## 2023-08-17 added toolbar support
-With this updqte, it is possible to use events TOOLBAR and USER_COMMAND just like in CL_GUI_ALV_GRID
+With this update, it is possible to use events TOOLBAR and USER_COMMAND just like in CL_GUI_ALV_GRID
