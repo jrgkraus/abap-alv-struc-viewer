@@ -454,7 +454,7 @@ class zcl_stralv_output_table implementation.
         value = value #( old_inputs[ ref_field = f-fieldname ]-fieldvalue optional ) ).
       if  field-attribute-no_display = abap_true or
           fields->is_description_field( field-ddic-fieldname ).
-        exit.
+        continue.
       endif.
       insert
         value zst_stralv_tab_line(
